@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+ 
 }
 
 .App-logo {
@@ -28,11 +29,140 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+body {
+  background-color: rgb(48, 47, 47) !important;
+}
+* {
+  font-family: "Circular Spotify Tx T Black", sans-serif;
+  margin: 0;
+  color: white;
+}
+/* **************** SIDE NAV ********************** */
+.sidebar {
+  width: 180px; /*width: 260px;*/
+  height: 100%;
+  position: fixed;
+  background-color: black;
+  padding-top: 20px;
+  z-index: 1;
+  left: 0;
+  padding-left: 0;
+  margin: 0;
+}
+#logo {
+  margin-left: 12px !important;
+  justify-content: center;
+  display: flex;
+  padding-left: 5px;
+  padding-bottom: 15px;
+  width: 120px; /*150px*/
+  image-rendering: optimizeQuality;
+  color: rgb(177, 172, 172);
+}
+.sidebar a {
+  display: block;
+  padding-left: 10px; /*18px*/
+  margin-left: 0;
+  margin-top: 10px;
+  color: rgb(177, 172, 172);
+  font-size: 0.7em; /* added  16:21 11/5/21*/
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+}
+#tarkan {
+  object-fit: cover;
+  max-height: 40px;
+  max-width: 40px;
+  border-radius: 25px;
+  margin-left: 25px;
+}
+.sidebar a.active {
+  /* added a class of active to home so it looks exactly like the screenshot, in navbar, click makes link active */
+  border-left: 4px solid var(--spot-green);
+  color: #fff;
+}
+.player {
+  display: flex;
+}
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
   }
-  to {
-    transform: rotate(360deg);
+  .sidebar a {
+    float: left;
   }
+  div.content {
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+.side {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 20px;
+}
+#side {
+  cursor: pointer;
+}
+.items:hover {
+  color: #fff;
+}
+
+#footer-login,
+#footer-login > h6 {
+  /* login page footer */
+  font-size: xx-small;
+  padding-top: 0;
+}
+.items:hover {
+  color: #ffff;
+}
+#footer-home {
+  z-index: 2;
+  padding-top: 10px; /*20px*/
+  background-color: #383535;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 75px; /* IMPORTANT: has been matched to screenshot (was 100px) */
+  width: 100%;
+}
+.radiohead:hover {
+  text-decoration: underline;
+}
+.creep:hover {
+  text-decoration: underline;
+}
+.player {
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+#nowPlaying {
+  align-self: center;
+  padding-bottom: 50px;
+  align-content: center;
+}
+#footer-home img {
+  margin-left: 8px;
+  width: 60px;
+  height: 60px;
+}
+.row .process {
+  align-items: center;
+  margin-bottom: 30px;
+  flex-direction: column;
+}
+.songDur {
+  flex-direction: row;
+  align-content: center;
 }
