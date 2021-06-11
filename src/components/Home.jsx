@@ -41,7 +41,7 @@ class Home extends Component {
               <div className="pt-4" style={{zIndex:'1'}}>
                 <ul className="nav nav-tabs justify-content-center">
                     <li className="nav-item pr-1">
-                      <a className="nav-link active"><strong>TRENDING</strong></a>
+                      <a className="nav-link "><strong>TRENDING</strong></a>
                     </li>
                     <li className="nav-item pr-1">
                       <a className="nav-link"><strong>PODCAST</strong></a>

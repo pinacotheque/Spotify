@@ -12,7 +12,19 @@ function App() {
       <Router>
 
       <Navbar/>
+
       <Home/>
+
+      <Player/>
+
+      <Route exact path = '/artist'>
+        {/* <Artist/> */}
+        </Route>
+
+      <Route exact path = '/album'>
+          {/* <Album/> */}
+      </Route>
+
       </Router>
 
     </div>
