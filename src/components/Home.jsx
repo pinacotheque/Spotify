@@ -9,14 +9,10 @@ class Home extends Component {
         albums:[]
     }
 
-    componentDidMount () {
-        this.fetchAlbum()
-    }
-
-    fetchAlbum = async () => {
+    componentDidUpdate =async () => {
 
         try {
-            let response = await fetch('https://striveschool-api.herokuapp.com/api/deezer/search?q=opeth' )
+            let response = await fetch('https://striveschool-api.herokuapp.com/api/deezer/search?q=' + this.props.selected)
             if (response.ok) {
                 let data = await response.json()
                 
@@ -64,7 +60,7 @@ class Home extends Component {
             
              {this.state.albums &&
               this.state.albums.map((album) => (
-                <Cards key={album.id} img={album.album.cover_big} title={album.title} id={album.id} />
+                <Cards key={album.id} img={album.album.cover_big} title={album.title} id={album.album.id} />
               ))}
          
             </div>

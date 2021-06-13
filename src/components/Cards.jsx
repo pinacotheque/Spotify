@@ -1,7 +1,6 @@
 
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Modal } from "react-bootstrap"
 import { useState } from "react"
 import { withRouter } from 'react-router-dom'
 
@@ -21,10 +20,11 @@ const Cards = (props) => {
     <div className="mt-5 d-flex">
             <div className="px-0 mb-4 mr-4" style={{height:'200px',width:'200px'}}>
             
-            <a href="artist.html"><img src={props.img} className="card-img-top" alt="..."/></a>
+            <img src={props.img} onClick={()=>props.history.push('/album/' + props.id)} className="card-img-top" alt="..."/>
 
             <div className=" text-center p-3 " >
                 <h5 style={{color:'white',fontSize:'14px'}} >{props.title} </h5>
+                <h6 style={{color:'white',fontSize:'14px'}} >{props.title} </h6>
             </div>
             </div>
     </div>
@@ -35,5 +35,3 @@ const Cards = (props) => {
 };
 
 export default withRouter(Cards);
-
-{/*  */}

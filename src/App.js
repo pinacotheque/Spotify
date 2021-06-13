@@ -1,29 +1,40 @@
 import './App.css';
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Navbar from './components/Navbar';
 import Player from './components/Player';
 import Home from './components/Home';
+import Album from './components/Album';
+import ShowDetail from './components/ShowDetail';
+import {useState} from 'react'
 
 
 function App() {
+
+  const [selected, setSelected] = useState(null)
+
   return (
     <div >
       
       <Router>
 
-      <Navbar/>
+        <Navbar selected ={selected} changeSelected={(newCharacter) => setSelected(newCharacter)}/>
+      
+          <Switch>
 
-      <Home/>
+            <Route exact path = '/'>
+              <Home selected={selected} />
+            </Route>
 
-      <Player/>
+            <Route exact path = '/artist'>
+              {/* <Artist/> */}
+            </Route>
 
-      <Route exact path = '/artist'>
-        {/* <Artist/> */}
-        </Route>
+            <Route exact path = '/:id/' render={(routerProps) => <ShowDetail {...routerProps} selected={selected}/>} />
+              
+          
 
-      <Route exact path = '/album'>
-          {/* <Album/> */}
-      </Route>
+          </Switch>
+
 
       </Router>
 
