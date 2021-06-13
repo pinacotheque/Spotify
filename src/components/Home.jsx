@@ -9,7 +9,11 @@ class Home extends Component {
         albums:[]
     }
 
-    componentDidUpdate =async () => {
+    componentDidUpdate =async ( prevProps) => {
+
+      if(prevProps.selected !== this.props.selected){
+
+      
 
         try {
             let response = await fetch('https://striveschool-api.herokuapp.com/api/deezer/search?q=' + this.props.selected)
@@ -25,6 +29,10 @@ class Home extends Component {
         } catch (e) {
             console.log(e)
         }
+
+      }
+
+
     }
 
     render() {

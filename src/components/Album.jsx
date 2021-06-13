@@ -1,6 +1,6 @@
 
 
-const Album = ({info}) => {
+const Album = ({album}) => {
     
     return(
         <div id="content" className="col-12 offset-2 col-xl-10 pb-0 ">
@@ -11,11 +11,11 @@ const Album = ({info}) => {
 
                 <div className="d-flex align-center justify-content-center">
                   <a href="artist.html"><img id="queen" className="w-60 img-fluid"
-                    src={info.cover_big}
+                    src={album.cover_big}
                     className="d-block float-end" alt="..."/></a>
                   </div>
                   <h5 className="queen-II text-center mt-2">(Queen II Deluxe Edition 2011 Remaster)</h5>
-                  <p className="small text-center mt-1">{{info}.title}</p>
+                  <p className="small text-center mt-1">{album.title}</p>
                     <div className="text-center">
                         <button type="button" className="btn badge-pill btn-success btn-sm myBtn">PLAY</button>
                     </div>
