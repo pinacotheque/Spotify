@@ -8,7 +8,7 @@ const ShowDetail = ({ match , history }) => {
     useEffect(() => {
         const getAlbumData = async () => {
             let id = match.id
-            if (id) {
+            if (match.isExact) {
                 let response = await fetch('https://striveschool-api.herokuapp.com/api/deezer/album/' + match.params.id)
                 let albumInfo = await response.json()
                 console.log('showdetaildaki albuminfoyu yazir bakim',albumInfo)
@@ -16,7 +16,7 @@ const ShowDetail = ({ match , history }) => {
             }
         }
         getAlbumData()
-    }, [match.params.id])
+    }, [])
 
     return (
         <div>

@@ -29,12 +29,12 @@ function App() {
               {/* <Artist/> */}
             </Route>
 
-            <Route exact path = '/album/:id' render={(routerProps) => <ShowDetail {...routerProps} selected={selected}/>} />
               
           
 
           </Switch>
 
+            <Route path = '/album/:id' render={(routerProps) => <ShowDetail {...routerProps} selected={selected}/>} />
 
       </Router>
 
