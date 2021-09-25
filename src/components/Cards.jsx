@@ -10,13 +10,7 @@ const Cards = (props) => {
   const handleClose = () => setAlbum('');
   return (
     <>
-      {/* <img src={props.img} className="thumbnail" alt="thumbnail" onClick={() => props.history.push('/details/' + props.id)} />
-      <Modal album={album} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>{props.title}</Modal.Title>
-        </Modal.Header>
-        
-      </Modal> */}
+      
     <div className="mt-5 d-flex">
             <div className="px-0 mb-4 mr-4" style={{height:'200px',width:'200px'}}>
             

@@ -5,7 +5,7 @@ import Player from './components/Player';
 import Home from './components/Home';
 import Album from './components/Album';
 import ShowDetail from './components/ShowDetail';
-import {useState} from 'react'
+import { useState } from 'react'
 
 
 function App() {
@@ -14,28 +14,29 @@ function App() {
 
   return (
     <div >
-      
+
       <Router>
 
-        <Navbar selected ={selected} changeSelected={(newCharacter) => setSelected(newCharacter)}/>
-      
-          <Switch>
+        <Navbar selected={selected} changeSelected={(newCharacter) => setSelected(newCharacter)} />
 
-            <Route exact path = '/'>
-              <Home selected={selected} />
-            </Route>
+        <Switch>
 
-            <Route exact path = '/artist'>
-              {/* <Artist/> */}
-            </Route>
+          <Route exact path='/'>
+            <Home selected={selected} />
+          </Route>
 
-              
-          
+          <Route exact path='/artist'>
+            {/* <Artist/> */}
+          </Route>
 
-          </Switch>
 
-            <Route path = '/album/:id' render={(routerProps) => <ShowDetail {...routerProps} selected={selected}/>} />
 
+
+        </Switch>
+
+        <Route path='/album/:id' render={(routerProps) => <ShowDetail {...routerProps} selected={selected} />} />
+
+        <Player />
       </Router>
 
     </div>

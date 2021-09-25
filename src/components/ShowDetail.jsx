@@ -11,7 +11,7 @@ const ShowDetail = ({ match , history }) => {
             if (match.isExact) {
                 let response = await fetch('https://striveschool-api.herokuapp.com/api/deezer/album/' + match.params.id)
                 let albumInfo = await response.json()
-                console.log('showdetaildaki albuminfoyu yazir bakim',albumInfo)
+                console.log('showdetail',albumInfo)
                 setInfo(albumInfo)
             }
         }

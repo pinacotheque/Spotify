@@ -1,13 +1,13 @@
 // import {} from 'react-bootstrap'
-
+import image from './assets/logo.png'
 const Navbar = ({selected, changeSelected})=>{
     return(
-        <div md={2} className="sidebar">
+        <div md={2} className="sidebar" id="sidebar">
          <div className="col side px-3 pb-5" id="side">
           <div>
             <img
               className="mb-3"
-              src={'/assets/spotilogo.png'}
+              src={image}
               alt="spotify logo"
               id="logo"
             />
@@ -79,7 +79,6 @@ const Navbar = ({selected, changeSelected})=>{
             />
             <div className={"row align-items-center pb-4"}>
               <img className={"d-flex"} src="images/tarkan.jpeg" id="tarkan" />
-              <a className={"flex-row m-0"}>Tarkan </a>
             </div>
           </div>
         </div>
