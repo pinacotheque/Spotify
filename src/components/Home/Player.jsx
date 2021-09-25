@@ -1,4 +1,4 @@
-import { Favourited, Shuffle, SkipStart, PlayCircle, SkipEnd, Repeat, Display, VolumeUp, Paragraph } from "./svgs/svgs.jsx"
+import { Favourited, Shuffle, SkipStart, PlayCircle, SkipEnd, Repeat, Display, VolumeUp, Paragraph } from "../svgs/svgs.jsx"
 
 
 const Player = () => {
@@ -10,13 +10,13 @@ const Player = () => {
     <div className="container-fluid d-flex">
 
     {/* now playing */}
-        <div className="col-2 align-items-center">
-            <div className="row justify-content-center align-items-center">
+        <div className="col-2 align-items-center ">
+            <div className="row align-items-center ml-3">
+               
                 <img src="images/radio.png" />
-
                 <div className="mx-3">
                 <p id="nowPlaying"> Creep </p>
-                <p className="nowPlaying">Radiohead</p>
+                <a className="nowPlaying">Radiohead</a>
                 </div>
 
                 {Favourited()}
@@ -67,21 +67,11 @@ const Player = () => {
             {Paragraph()}
             {Display()}
             {VolumeUp()}
-
-            <hr className="my-0 mx-2 align-self-center"
-                style={{width: "80px",
-                  color: "#ffff",
-                  height: "3px",
-                  marginBottom: "10px",
-                  border:" 1px solid rgb(131, 129, 129)",
-                  backgroundColor: "rgb(131, 129, 129)",
-                  borderRadius: "3px"}}/> 
-    
+            <hr className="my-0 mx-2 align-self-center hrStyling"
+                />
             </div>
         </div>
-      
       </div>
-    
 </footer>
 )}
 

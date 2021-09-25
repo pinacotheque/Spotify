@@ -1,10 +1,10 @@
 import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import Navbar from './components/Navbar';
-import Player from './components/Player';
-import Home from './components/Home';
-import Album from './components/Album';
-import ShowDetail from './components/ShowDetail';
+import Navbar from './components/Home/Navbar';
+import Player from './components/Home/Player';
+import Home from './components/Home/Home';
+import Album from './components/Details/Album';
+import ShowDetail from './components/Details/ShowDetail';
 import { useState } from 'react'
 
 
