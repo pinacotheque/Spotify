@@ -1,49 +1,41 @@
-
-
+import { Container, Form, Row, Col, ListGroup } from 'react-bootstrap'
+import TrackList from './TrackList'
+import styles from './Details.module.css'
+import { Clock } from '../svgs/svgs'
 const Album = ({album}) => {
     
     return(
-        <div id="content" className="col-12 offset-2 col-xl-10 pb-0 ">
-          <div className="container">
-            <div className="row">
-              
-              <div className="col-12 col-sm-12 col-md-4 p-0 mt-5 ">
-
-                <div className="d-flex align-center justify-content-center">
-                  <a href="artist.html"><img id="queen" className="w-60 img-fluid"
-                    src={album.cover_big}
-                    className="d-block float-end" alt="..."/></a>
-                  </div>
-                  <h5 className="queen-II text-center mt-2">(Queen II Deluxe Edition 2011 Remaster)</h5>
-                  <p className="small text-center mt-1">{album.title}</p>
-                    <div className="text-center">
-                        <button type="button" className="btn badge-pill btn-success btn-sm myBtn">PLAY</button>
-                    </div>
-                  <p className="small text-center  ">1974 . 16 SONGS</p>
-                 <div className="text-center"> 
-                 <i className="far fa-heart extra mr-2"></i>
-                  <i className="fas fa-ellipsis-h extra "></i>
-                </div>
-            
-              </div>
-            
-              <div id="albumList" className="col-12 col-sm-12 col-md-8 mt-4  ">
-                <table className="table table-borderless ">
-
-                    <tbody id="music-album">
-                        <tr scope="row ">
-                        <td><i className="fas fa-music"></i></td>
-                        <td className="col "> <a href="#">Procession-Remastered 2011</a> 
-                        <p>Queen</p></td>
-                        <td className="col duration">1:13</td>
-                        </tr>
-                    </tbody>
-                </table>
-                </div>
-            </div>
-        </div>
-        </div>
-        )
+      <Container className="col-10 offset-2 pb-0 pt-4">
+        <Row>
+          <Col md={3}>
+            <img src={album.cover_medium}/>
+          </Col>
+          <Col md={7} className={styles.albumInfoCol}>
+            <h3 className={styles.albumTitle}>{album.title}</h3>
+            <h6>{album.duration} - {album.release_date}</h6>
+            <img src={album.cover_small} className={styles.littleArtistPic}/> <a href="">{album.artist.name}</a>
+          </Col>
+        </Row>
+      
+      <Col className="d-flex justify-content-between mt-5">
+      <h6 ># TITLE</h6>
+      <h6>{Clock()}</h6>
+      </Col>
+     
+      <hr className={styles.hrLine}/>
+        <Row>
+          <Col>
+          <ul className="pl-0">
+             {album.tracks.data.length>0 &&
+             album.tracks.data.map((album) => (
+               <TrackList key={album.id} album={album}/>
+             ))} 
+         </ul>
+          </Col>
+        </Row>
+      </Container>
+    )
+    
 }
 
 export default Album

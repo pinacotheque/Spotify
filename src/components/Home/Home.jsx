@@ -4,24 +4,13 @@ import { useState, useEffect } from 'react'
 
 const Home = ({selected}) => {
 
-    const [albums, setAlbums] = useState([])
+  const [albums, setAlbums] = useState([])
 
-    useEffect(() => {
-      const getMusic = async () => {
-        
-            let response = await fetch('https://striveschool-api.herokuapp.com/api/deezer/search?q=' + selected)
-            
-                let data = await response.json()
-                console.log(data)
-                setAlbums(data.data)
-      }
-          getMusic()
-        }, [selected])
-        
-      const topBar = [ "TRENDING", "PODCAST", "MOODS AND GENERES", "NEW RELEASES", "DISCOVER"]
+ 
+    const topBar = [ "TRENDING", "PODCAST", "MOODS AND GENERES", "NEW RELEASES", "DISCOVER"]
       
-      return  (
-        <Container> 
+    return  (
+      <Container> 
         <div id="contentHome" className="offset-2  ">
           
           <div className="pt-4" style={{zIndex:'1'}}>
@@ -33,16 +22,11 @@ const Home = ({selected}) => {
           </div>
             
             <div className='d-flex flex-wrap '>
-            
-             {albums.length>0 &&
-              albums.map((album) => (
-                <Cards key={album.id} img={album.album.cover_big} title={album.title} id={album.album.id} album={album}/>
-              ))}
-         
+  
             </div>
             </div>
-        </Container>
-      )
+      </Container>
+    )
     
 }
 

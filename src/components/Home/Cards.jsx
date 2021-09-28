@@ -11,7 +11,7 @@ const Cards = (props) => {
             
           <img src={props.img} onClick={()=> props.history.push('/album/' + props.id)} className="card-img-top" alt="..."/>
 
-          <div className=" text-center p-3 " >
+          <div className=" text-center pt-3 " >
             <h5 style={{color:'white',fontSize:'14px'}} >{props.album.title} </h5>
             <h6 style={{color:'white',fontSize:'14px'}} >{props.album.artist.name} </h6>
           </div>

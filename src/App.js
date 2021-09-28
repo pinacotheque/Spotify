@@ -6,6 +6,7 @@ import Home from './components/Home/Home';
 import Album from './components/Details/Album';
 import ShowDetail from './components/Details/ShowDetail';
 import { useState } from 'react'
+import Search from './components/Search/Search';
 
 
 function App() {
@@ -22,7 +23,7 @@ function App() {
         <Switch>
 
           <Route exact path='/'>
-            <Home selected={selected} />
+            <Home  selected={selected} />
           </Route>
 
           <Route exact path='/artist'>
@@ -30,11 +31,10 @@ function App() {
           </Route>
 
 
-
-
         </Switch>
 
-        <Route path='/album/:id' render={(routerProps) => <ShowDetail {...routerProps} selected={selected} />} />
+        <Route  path='/album/:id' render={(routerProps) => <ShowDetail {...routerProps} selected={selected} />} />
+        <Route exact path='/search' render={(routerProps) => <Search {...routerProps} selected={selected} changeSelected={(newCharacter) => setSelected(newCharacter)} />} />
 
         <Player />
       </Router>
