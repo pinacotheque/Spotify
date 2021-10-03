@@ -1,0 +1,19 @@
+#cardImg{
+    cursor: pointer;
+}
+
+.profile{
+    text-align: end;
+    justify-content: flex-end;
+    padding-top: 20px;
+    float: right;
+}
+
+.profile h6{
+    background-color: black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-inline: 25px;
+    width: min-content;
+    border-radius: 50px;
+}

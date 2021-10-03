@@ -65,7 +65,20 @@
 .threeIcons{
  text-align: end;
  align-self: center;
+ justify-content: flex-end;
+ margin-right: 5px;
 }
+.threeCol{
+    align-self: center;
+}
+
+
 .rowofCols{
     justify-content: space-between;
 }
+
+.trackDiv:hover > .threeIcons h6{
+    visibility: visible !important;
+    text-align: end;
+    align-self: center;
+   }

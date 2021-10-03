@@ -7,7 +7,9 @@ import Album from './components/Details/Album';
 import ShowDetail from './components/Details/ShowDetail';
 import { useState } from 'react'
 import Search from './components/Search/Search';
-
+import Login from './components/Login/Login';
+import Account from './components/Login/Account';
+import Register from './components/Login/Register';
 
 function App() {
 
@@ -18,25 +20,34 @@ function App() {
 
       <Router>
 
-        <Navbar selected={selected} changeSelected={(newCharacter) => setSelected(newCharacter)} />
+        <Route exact path='/account' render={(routerProps) => <Account />} />
+
+        <Route exact path='/' render={(routerProps) => <Navbar selected={selected} changeSelected={(newCharacter) => setSelected(newCharacter)} />} />
+        <Route exact path='/' render={(routerProps) => <Player />} />
+
+        <Route exact path='/login'>
+          <Login />
+        </Route>
+
+        <Route exact path='/register'>
+          <Register />
+        </Route>
 
         <Switch>
 
           <Route exact path='/'>
-            <Home  selected={selected} />
+            <Home selected={selected} />
           </Route>
 
           <Route exact path='/artist'>
             {/* <Artist/> */}
           </Route>
 
-
         </Switch>
 
-        <Route  path='/album/:id' render={(routerProps) => <ShowDetail {...routerProps} selected={selected} />} />
+        <Route path='/album/:id' render={(routerProps) => <ShowDetail {...routerProps} selected={selected} />} />
         <Route exact path='/search' render={(routerProps) => <Search {...routerProps} selected={selected} changeSelected={(newCharacter) => setSelected(newCharacter)} />} />
 
-        <Player />
       </Router>
 
     </div>

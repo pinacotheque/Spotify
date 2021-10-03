@@ -17,7 +17,7 @@ const Search = ({selected, changeSelected}) => {
       }, [selected])
 
     return(
-        <Container className="offset-2" >
+        <Container className="offset-2  pl-0" >
         <Form id="searchBar" className="input-group mb-3 pt-4" >
             <FormControl 
                 className="inputbar"
@@ -26,7 +26,7 @@ const Search = ({selected, changeSelected}) => {
                 placeholder="Search..." />
             </Form>
 
-            <div className='d-flex flex-wrap'>
+            <div className='d-flex flex-wrap justify-content-around'>
              {albums.length>0 &&
              albums.map((album) => (
                <Cards key={album.id} img={album.album.cover_big} title={album.title} id={album.album.id} album={album}/>

@@ -13,8 +13,17 @@ const TrackList = ({album}) => {
         <p className={styles.trackArtist}>{album.artist.name}</p>
         </Col>
 
-        <Col className={styles.threeIcons}>
-        <h6 className="mb-0">{Heart()} {(album.duration/60).toFixed(2)} {ThreeDots()}</h6>
+        <Col className={styles.threeCol}>
+            <Row className={styles.threeIcons}>
+                <div>
+
+                {Heart()} 
+                </div>
+        <div>
+        {(album.duration/60).toFixed(2)} 
+        </div>
+        <h6 className="mb-0"> {ThreeDots()}</h6>
+            </Row>
         </Col>
 
         </Row>
