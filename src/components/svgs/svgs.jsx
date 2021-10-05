@@ -280,7 +280,7 @@ export const ThreeDots = () => {
     width="20" 
     height="20" 
     fill="currentColor" 
-    className="bi bi-three-dots ml-4" 
+    className="bi bi-three-dots ml-4 " 
     viewBox="0 0 16 16">
   <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
 </svg>

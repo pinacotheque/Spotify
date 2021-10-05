@@ -22,16 +22,12 @@ function App() {
 
         <Route exact path='/account' render={(routerProps) => <Account />} />
 
-        <Route exact path='/' render={(routerProps) => <Navbar selected={selected} changeSelected={(newCharacter) => setSelected(newCharacter)} />} />
-        <Route exact path='/' render={(routerProps) => <Player />} />
+        <Route exact path={['/', '/album/:id', '/search']} render={(routerProps) => <Navbar selected={selected} changeSelected={(newCharacter) => setSelected(newCharacter)} />} />
+        <Route exact path={['/', '/album/:id', '/search']} render={(routerProps) => <Player />} />
 
-        <Route exact path='/login'>
-          <Login />
-        </Route>
+        <Route exact path='/login' render={(routerProps) => <Login />} />
 
-        <Route exact path='/register'>
-          <Register />
-        </Route>
+        <Route exact path='/register' render={(routerProps) => <Register />} />
 
         <Switch>
 

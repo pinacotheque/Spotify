@@ -1,6 +1,7 @@
 import image from '../assets/logo.png'
 import { Container, Form, FormControl } from 'react-bootstrap'
 import { Collection, House, Install,Search } from '../svgs/svgs'
+import styles from './Home.module.css'
 
 const Navbar = ({selected, changeSelected})=>{
     return(
@@ -8,9 +9,9 @@ const Navbar = ({selected, changeSelected})=>{
          <div className="col side px-3 pb-5" id="side">
           <div>
             <img className="mb-3" src={image} id="logo"/>
-            <a href="/" className="items"> {House()} Home </a>
-            <a href="/search" className="items"> {Search()} Search </a>
-            <a href="#" className="items">{Collection()} Your Library</a>
+            <a href="/" className={styles.items}> {House()} Home </a>
+            <a href="/search" className={styles.items}> {Search()} Search </a>
+            <a href="#" className={styles.items}>{Collection()} Your Library</a>
           </div>
           <div>
             <a href="#" className="items">{Install()} Install App </a>

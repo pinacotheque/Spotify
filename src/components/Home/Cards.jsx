@@ -6,8 +6,8 @@ const Cards = (props) => {
 
   return (
   <>
-    <div className="mt-5 d-flex">
-      <div className="px-0 mb-5 mr-4" style={{height:'200px',width:'200px'}}>
+    <div className={styles.Card}>
+      <div className="px-0  mr-2 " style={{height:'200px',width:'200px'}}>
             
           <img src={props.img} onClick={()=> props.history.push('/album/' + props.id)} className="card-img-top" id={styles.cardImg} alt="..."/>
 

@@ -1,6 +1,7 @@
 import { Container, Form, FormControl } from 'react-bootstrap'
 import { useState, useEffect } from 'react'
 import Cards from '../Home/Cards'
+import styles from './Search.module.css'
 
 const Search = ({selected, changeSelected}) => {
     
@@ -17,16 +18,16 @@ const Search = ({selected, changeSelected}) => {
       }, [selected])
 
     return(
-        <Container className="offset-2  pl-0" >
+        <Container className="offset-2  pl-0" id={styles.searchContainer}>
         <Form id="searchBar" className="input-group mb-3 pt-4" >
             <FormControl 
                 className="inputbar"
                 onChange={(e) => { changeSelected(e.target.value) }}
                 type="text" 
                 placeholder="Search..." />
-            </Form>
+        </Form>
 
-            <div className='d-flex flex-wrap justify-content-around'>
+            <div className='d-flex flex-wrap'>
              {albums.length>0 &&
              albums.map((album) => (
                <Cards key={album.id} img={album.album.cover_big} title={album.title} id={album.album.id} album={album}/>

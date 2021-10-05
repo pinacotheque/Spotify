@@ -6,7 +6,7 @@ const Album = ({album}) => {
     
     return(
       <Container className="col-10 offset-2 pb-0 pt-4">
-        <Row>
+        <Row className={styles.albumImageRow}>
           <Col md={3}>
             <img src={album.cover_medium}/>
           </Col>
@@ -17,15 +17,15 @@ const Album = ({album}) => {
           </Col>
         </Row>
       
-      <Col className="d-flex justify-content-between mt-5">
-      <h6 ># TITLE</h6>
-      <h6>{Clock()}</h6>
+      <Col className="d-flex justify-content-between mt-5 pr-5">
+      <h6 className="pl-3">TITLE</h6>
+      <h6 className="pr-3">{Clock()}</h6>
       </Col>
      
       <hr className={styles.hrLine}/>
-        <Row>
+        <Row className={styles.detailsRow}>
           <Col>
-          <ul className="pl-0">
+          <ul className="pl-0 ">
              {album.tracks.data.length>0 &&
              album.tracks.data.map((album) => (
                <TrackList key={album.id} album={album}/>

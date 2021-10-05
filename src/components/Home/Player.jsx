@@ -11,8 +11,8 @@ return(
             <div className="row align-items-center ml-3">
                 <img src="images/radio.png" />
                 <div className="mx-3">
-                <p id="nowPlaying"> Creep </p>
-                <a className="nowPlaying">Radiohead</a>
+                <p id="nowPlaying " className=" mb-0" > Title </p>
+                <a className="nowPlaying">Artist</a>
                 </div>
                 {Favourited()}
             </div>
@@ -29,14 +29,14 @@ return(
             <div className="row justify-content-center">
             <div className="row songDur align-items-center my-1">
             <div className="col">
-              <p className="mb-0" style={{color: "#ffff", fontSize: "10px"}}>00:00</p>
+              <p className="mb-0" style={{color: "#ffff", fontSize: "11px"}}>00:00</p>
             </div>
 
             <div className="col">
               <hr className="my-0 longHr" />
             </div>
             <div className="col">
-              <p className="mb-0" style={{color: "#ffff", fontSize: "10px"}}>7:18</p>
+              <p className="mb-0" style={{color: "#ffff", fontSize: "11px"}}>00:00</p>
             </div>
           </div>
             </div>

@@ -3,6 +3,7 @@
     background-color: rgb(87, 87, 87);
 }
 
+
 .trackItem {
    list-style-type: none;
    justify-content: space-between;
@@ -81,4 +82,20 @@
     visibility: visible !important;
     text-align: end;
     align-self: center;
-   }
+}
+
+.detailsRow{
+    padding-bottom: 140px;
+}
+.PlayCircle svg{
+    margin-right: 15px !important;
+    margin-left: 0 !important;
+    visibility: hidden;
+}
+.ThreeDots, .Heart{
+    visibility: hidden;
+}
+
+.trackDiv:hover  .PlayCircle svg, .trackDiv:hover .ThreeDots svg, .trackDiv:hover .Heart svg{
+    visibility: visible;
+}
