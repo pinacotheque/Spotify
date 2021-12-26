@@ -1,40 +1,40 @@
-#cardImg{
-    cursor: pointer;
+#cardImg {
+  cursor: pointer;
 }
-.Card{
-    margin-top: 20px;
-    padding-left: 10px;
-    padding-top: 10px;
-    padding-bottom: 100px;
+.Card {
+  margin-top: 20px;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 150px;
+  border-radius: 5px;
 }
-.Card:hover{
-    background-color: rgb(73, 73, 73);
-}
-
-.profile{
-    text-align: end;
-    justify-content: flex-end;
-    padding-top: 20px;
-    float: right;
+.Card:hover {
+  background-color: rgb(73, 73, 73);
 }
 
-.profile h6{
-    background-color: black;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-inline: 25px;
-    width: min-content;
-    border-radius: 50px;
-}
-.items{
-    font-size: 13px !important;
-    padding-bottom: 5px;
+.profile {
+  text-align: end;
+  justify-content: flex-end;
+  padding-top: 20px;
+  float: right;
 }
 
-
-#contentHome{
-    padding-bottom: 120px;
+.profile h6 {
+  background-color: black;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-inline: 25px;
+  width: min-content;
+  border-radius: 50px;
 }
-.containerHome{
-    margin-bottom: 20px;
+.items {
+  font-size: 13px !important;
+  padding-bottom: 5px;
+}
+
+#contentHome {
+  padding-bottom: 120px;
+}
+.containerHome {
+  margin-bottom: 20px;
 }
