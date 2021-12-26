@@ -17,7 +17,15 @@ const Home = () => {
   useEffect(() => {
     const getMusic = async () => {
       let response = await fetch(
-        "https://striveschool-api.herokuapp.com/api/deezer/search?q=" + "tops"
+        "https://striveschool-api.herokuapp.com/api/deezer/search?q=" + "tops",
+        {
+          method: "GET",
+          headers: {
+            "x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com",
+            "x-rapidapi-key":
+              "7a40d8f461msh79f4f411e8e3ab7p1e0a92jsnd87ad8dc4b57",
+          },
+        }
       );
       let data = await response.json();
       console.log(data);
@@ -45,7 +53,7 @@ const Home = () => {
           </ul>
         </div>
 
-        <div className="d-flex flex-wrap pl-0">
+        <div className="d-flex flex-wrap pl-5">
           {albums.length > 0 &&
             albums.map((album) => (
               <Cards
