@@ -1,15 +1,20 @@
 import { Container, Form, Row, Col, ListGroup } from "react-bootstrap";
-import { Heart, PlayCircle, ThreeDots } from "../svgs/svgs";
+import { Heart, Pause, PlayCircle, ThreeDots } from "../svgs/svgs";
 import styles from "./Details.module.css";
+import { useState } from "react";
 
 const TrackList = ({ album }) => {
+  const [playing, setPlaying] = useState(false);
+  const togglePlay = () => {
+    setPlaying(!playing);
+  };
+
   return (
-    <div className={styles.trackDiv}>
+    <div className={playing ? styles.trackDivChange : styles.trackDiv}>
       <Row className={styles.rowofCols}>
         <Col className="d-flex">
-          <p className={styles.PlayCircle} onClick={album.preview}>
-            {" "}
-            {PlayCircle()}
+          <p className={styles.PlayCircle} onClick={togglePlay}>
+            {playing ? Pause() : PlayCircle()}
           </p>
 
           <div>

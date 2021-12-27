@@ -39,19 +39,23 @@ const Search = ({ selected, changeSelected }) => {
         />
       </Form>
 
-      <div className="d-flex flex-wrap">
-        {albums &&
-          albums.length > 0 &&
-          albums.map((album) => (
-            <Cards
-              key={album.id}
-              img={album.album.cover_big}
-              title={album.title}
-              id={album.album.id}
-              album={album}
-            />
-          ))}
-      </div>
+      {selected ? (
+        <div className="d-flex flex-wrap">
+          {albums &&
+            albums.length > 0 &&
+            albums.map((album) => (
+              <Cards
+                key={album.id}
+                img={album.album.cover_big}
+                title={album.title}
+                id={album.album.id}
+                album={album}
+              />
+            ))}
+        </div>
+      ) : (
+        <h5 className="mt-5">Start searching!</h5>
+      )}
     </div>
   );
 };

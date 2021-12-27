@@ -1,101 +1,107 @@
-.hrLine{
-    margin-top: 0;
-    background-color: rgb(87, 87, 87);
+.hrLine {
+  margin-top: 0;
+  background-color: rgb(87, 87, 87);
 }
-
 
 .trackItem {
-   list-style-type: none;
-   justify-content: space-between;
-   display: flex;
-   padding-bottom: 0;
-   margin-bottom: 0;
+  list-style-type: none;
+  justify-content: space-between;
+  display: flex;
+  padding-bottom: 0;
+  margin-bottom: 0;
 }
 
-.trackItem h6{
-    margin-bottom: 0;
+.trackItem h6 {
+  margin-bottom: 0;
 }
 
-.trackDiv p{
-    margin-bottom: 0;
+.trackDiv p {
+  margin-bottom: 0;
 }
 
-.trackDiv{
-    flex-direction: row;
-    padding-top: 13px;
-    padding-bottom: 8px;
-    padding-left: 15px;
-    padding-right: 14px; 
-    justify-content: space-between;
+.trackDiv {
+  flex-direction: row;
+  padding-top: 13px;
+  padding-bottom: 8px;
+  padding-left: 15px;
+  padding-right: 14px;
+  justify-content: space-between;
 }
 
-.trackDiv:hover{
-    background-color: rgb(66, 66, 68);
-    border-radius: 3px;
-}
-.bi-heart{
-    display: none;
-}
-.trackDiv:hover .bi-heart{
-    display: flex !important;
+.trackDiv:hover {
+  background-color: rgb(66, 66, 68);
+  border-radius: 3px;
 }
 
-.trackName{
-    align-content: center;
+.trackDivChange,
+.trackDivChange:hover .Heart svg {
+  background-color: rgb(66, 66, 68);
+}
+.bi-heart {
+  display: none;
+}
+.trackDiv:hover .bi-heart {
+  display: flex !important;
 }
 
-.trackArtist{
-    font-size: 15px;
-    color: rgb(219, 219, 219);
+.trackName {
+  align-content: center;
 }
 
-.albumInfoCol{
-    justify-content: flex-start;
-    align-self: center;
-}
-.albumTitle{
-    font-size: 44px;
-    font-weight: 800;
+.trackArtist {
+  font-size: 15px;
+  color: rgb(219, 219, 219);
 }
 
-.littleArtistPic{
-    border-radius: 50%;
-    height: 30px;
-    width: auto;
+.albumInfoCol {
+  justify-content: flex-start;
+  align-self: center;
 }
-.threeIcons{
- text-align: end;
- align-self: center;
- justify-content: flex-end;
- margin-right: 5px;
-}
-.threeCol{
-    align-self: center;
+.albumTitle {
+  font-size: 44px;
+  font-weight: 800;
 }
 
-
-.rowofCols{
-    justify-content: space-between;
+.littleArtistPic {
+  border-radius: 50%;
+  height: 30px;
+  width: auto;
+}
+.threeIcons {
+  text-align: end;
+  align-self: center;
+  justify-content: flex-end;
+  margin-right: 5px;
+}
+.threeCol {
+  align-self: center;
 }
 
-.trackDiv:hover > .threeIcons h6{
-    visibility: visible !important;
-    text-align: end;
-    align-self: center;
+.rowofCols {
+  justify-content: space-between;
 }
 
-.detailsRow{
-    padding-bottom: 140px;
-}
-.PlayCircle svg{
-    margin-right: 15px !important;
-    margin-left: 0 !important;
-    visibility: hidden;
-}
-.ThreeDots, .Heart{
-    visibility: hidden;
+.trackDiv:hover > .threeIcons h6 {
+  visibility: visible !important;
+  text-align: end;
+  align-self: center;
 }
 
-.trackDiv:hover  .PlayCircle svg, .trackDiv:hover .ThreeDots svg, .trackDiv:hover .Heart svg{
-    visibility: visible;
+.detailsRow {
+  padding-bottom: 140px;
+}
+.PlayCircle svg {
+  margin-right: 15px !important;
+  margin-left: 0 !important;
+  visibility: hidden;
+}
+.ThreeDots,
+.Heart {
+  visibility: hidden;
+}
+
+.trackDiv:hover .PlayCircle svg,
+.trackDiv:hover .ThreeDots svg,
+.trackDiv:hover .Heart svg {
+  visibility: visible;
 }
