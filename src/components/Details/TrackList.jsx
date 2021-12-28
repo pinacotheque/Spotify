@@ -5,7 +5,19 @@ import { useState } from "react";
 
 const TrackList = ({ album }) => {
   const [playing, setPlaying] = useState(false);
-  const togglePlay = () => {
+  // const togglePlay = () => {
+  //   setPlaying(!playing);
+  //   playMusic();
+  // };
+
+  const playMusic = () => {
+    let song = new Audio(album.preview);
+    if (!playing) {
+      song.play();
+    } else {
+      console.log("stop");
+      song.pause();
+    }
     setPlaying(!playing);
   };
 
@@ -13,7 +25,7 @@ const TrackList = ({ album }) => {
     <div className={playing ? styles.trackDivChange : styles.trackDiv}>
       <Row className={styles.rowofCols}>
         <Col className="d-flex">
-          <p className={styles.PlayCircle} onClick={togglePlay}>
+          <p className={styles.PlayCircle} onClick={playMusic}>
             {playing ? Pause() : PlayCircle()}
           </p>
 
