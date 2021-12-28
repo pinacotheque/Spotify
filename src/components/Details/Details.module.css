@@ -15,11 +15,13 @@
   margin-bottom: 0;
 }
 
-.trackDiv p {
+.trackDiv p,
+.trackDivChange p {
   margin-bottom: 0;
 }
 
-.trackDiv {
+.trackDiv,
+.trackDivChange {
   flex-direction: row;
   padding-top: 13px;
   padding-bottom: 8px;
@@ -34,13 +36,16 @@
 }
 
 .trackDivChange,
-.trackDivChange:hover .Heart svg {
+.trackDivChange .Heart svg {
   background-color: rgb(66, 66, 68);
 }
 .bi-heart {
   display: none;
 }
 .trackDiv:hover .bi-heart {
+  display: flex !important;
+}
+.trackDivChange .bi-heart {
   display: flex !important;
 }
 
@@ -86,6 +91,11 @@
   text-align: end;
   align-self: center;
 }
+.trackDivChange > .threeIcons h6 {
+  visibility: visible !important;
+  text-align: end;
+  align-self: center;
+}
 
 .detailsRow {
   padding-bottom: 140px;
@@ -98,6 +108,12 @@
 .ThreeDots,
 .Heart {
   visibility: hidden;
+}
+
+.trackDivChange .PlayCircle svg,
+.trackDivChange .ThreeDots svg,
+.trackDivChange .Heart svg {
+  visibility: visible;
 }
 
 .trackDiv:hover .PlayCircle svg,

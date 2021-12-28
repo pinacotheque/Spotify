@@ -5,14 +5,16 @@ import styles from "./Home.module.css";
 const Cards = (props) => {
   return (
     <>
-      <div className={styles.Card}>
+      <div
+        className={styles.Card}
+        onClick={() => props.history.push("/album/" + props.id)}
+      >
         <div
           className="px-0  mr-2 "
           style={{ height: "200px", width: "15rem" }}
         >
           <img
             src={props.img}
-            onClick={() => props.history.push("/album/" + props.id)}
             className="card-img-top"
             id={styles.cardImg}
             alt="..."
