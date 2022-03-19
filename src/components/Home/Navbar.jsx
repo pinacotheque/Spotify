@@ -17,14 +17,11 @@ const Navbar = ({ selected, changeSelected }) => {
             {" "}
             {Search()} Search{" "}
           </a>
-          <a href="#" className={styles.items}>
+          <a href="/library" className={styles.items}>
             {Collection()} Your Library
           </a>
         </div>
         <div>
-          <a href="#" className="items">
-            {Install()} Install App{" "}
-          </a>
           <hr
             className="my-2"
             style={{

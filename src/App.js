@@ -10,6 +10,7 @@ import Search from './components/Search/Search';
 import Login from './components/Login/Login';
 import Account from './components/Login/Account';
 import Register from './components/Login/Register';
+import Library from './components/YourLibrary/Library';
 
 function App() {
 
@@ -22,10 +23,11 @@ function App() {
 
         <Route exact path='/account' render={(routerProps) => <Account />} />
 
-        <Route exact path={['/', '/album/:id', '/search']} render={(routerProps) => <Navbar selected={selected} changeSelected={(newCharacter) => setSelected(newCharacter)} />} />
-        <Route exact path={['/', '/album/:id', '/search']} render={(routerProps) => <Player />} />
+        <Route exact path={['/', '/album/:id', '/search', '/library']} render={(routerProps) => <Navbar selected={selected} changeSelected={(newCharacter) => setSelected(newCharacter)} />} />
+        <Route exact path={['/', '/album/:id', '/search', '/library']} render={(routerProps) => <Player />} />
 
         <Route exact path='/login' render={(routerProps) => <Login />} />
+        <Route exact path='/library' render={(routerProps) => <Library />} />
 
         <Route exact path='/register' render={(routerProps) => <Register />} />
 
