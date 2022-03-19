@@ -39,3 +39,15 @@
 .containerHome {
   margin-bottom: 20px;
 }
+#footer {
+  z-index: 10;
+  position: fixed;
+  padding-top: 25px;
+  padding-bottom: 15px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: #1a1c20;
+  border-top: 1px solid rgb(63, 63, 63);
+}

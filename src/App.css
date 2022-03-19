@@ -49,7 +49,7 @@ body {
   margin: 0;
 }
 
-#logo { 
+#logo {
   justify-content: center;
   display: flex;
   padding-left: 5px;
@@ -97,41 +97,41 @@ body {
   z-index: 10;
 }
 
-#player svg{
+#player svg {
   color: #7a7a7a;
 }
 
-#player svg:hover{
+#player svg:hover {
   color: #ccc3c3;
 }
 
-#player i{
+#player i {
   color: #7a7a7a;
 }
 
-.pause{
-  visibility: hidden;  
+.pause {
+  visibility: hidden;
   position: absolute;
   right: 50%;
   transform: translateX(26px);
 }
 
-.playhr{
-  border-top: 2px solid #7a7a7a ;
+.playhr {
+  border-top: 2px solid #7a7a7a;
 }
 
-.slider{
-  -webkit-appearance: none;  
+.slider {
+  -webkit-appearance: none;
   appearance: none;
   height: 4px;
-  background: #d3d3d3; 
-  outline: none; 
-  opacity: 0.7; 
-  -webkit-transition: .2s; 
-  transition: opacity .2s;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
 }
 
-input{
+input {
   margin: 5px;
 }
 
@@ -140,33 +140,33 @@ input{
 }
 
 .slider::-webkit-slider-thumb {
-  -webkit-appearance: none; 
+  -webkit-appearance: none;
   appearance: none;
-  cursor: pointer; 
+  cursor: pointer;
 }
 
 .slider::-webkit-slider-thumb:hover {
   width: 10px;
   height: 10px;
-  background: #929191; 
-  cursor: pointer; 
+  background: #929191;
+  cursor: pointer;
 }
 
-.footerp{
+.footerp {
   color: white;
   line-height: 2px;
 }
 
-#seek-slider{
-  -webkit-appearance: none;  
+#seek-slider {
+  -webkit-appearance: none;
   appearance: none;
   height: 3px;
-  background: #d3d3d3; 
-  outline: none; 
+  background: #d3d3d3;
+  outline: none;
   width: 70%;
-  opacity: 0.7; 
-  -webkit-transition: .2s; 
-  transition: opacity .2s;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
 }
 
 #seek-slider:hover {
@@ -174,23 +174,12 @@ input{
 }
 
 #seek-slider::-webkit-slider-thumb {
-  -webkit-appearance: none; 
+  -webkit-appearance: none;
   appearance: none;
-  cursor: pointer; 
+  cursor: pointer;
 }
 
-#footer-home{
-  z-index: 10;
-  position:fixed;
-  padding-top: 25px;
-  padding-bottom: 15px;
-  bottom:0;
-  left: 0;
-  right: 0;
-  width:100%;
-  background-color: #1a1c20;
-}
-#sidebar{
+#sidebar {
   z-index: 5;
 }
 
@@ -198,7 +187,7 @@ input{
   font-size: "10px" !important;
   color: "rgb(177, 172, 172)";
 }
-.hrStyling{
+.hrStyling {
   width: 80px;
   color: #ffff;
   height: 3px;
@@ -207,7 +196,7 @@ input{
   background-color: rgb(131, 129, 129);
   border-radius: 3px;
 }
-.col .longHr{
+.col .longHr {
   width: 600px;
   color: #ffff;
   height: 3px;
@@ -216,9 +205,9 @@ input{
   background-color: rgb(88, 87, 87);
   border-radius: 3px;
 }
-#searchBar{
+#searchBar {
   width: 300px;
 }
-.inputbar{
+.inputbar {
   border-radius: 50px !important;
 }

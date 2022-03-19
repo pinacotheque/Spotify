@@ -1,7 +1,7 @@
 import { Container, Form, Row, Col, ListGroup } from "react-bootstrap";
 import TrackList from "./TrackList";
 import styles from "./Details.module.css";
-import { Clock } from "../svgs/svgs";
+import { Clock } from "../svgs/Svgs";
 const Album = ({ album }) => {
   return (
     <Container className="col-10 offset-2 pb-0 pt-4">
@@ -15,7 +15,7 @@ const Album = ({ album }) => {
             {album.duration} - {album.release_date}
           </h6>
           <img src={album.cover_small} className={styles.littleArtistPic} />{" "}
-          <a href="">{album.artist.name}</a>
+          <a href="">{album.artist?.name}</a>
         </Col>
       </Row>
 
@@ -28,7 +28,7 @@ const Album = ({ album }) => {
       <Row className={styles.detailsRow}>
         <Col>
           <ul className="pl-0 ">
-            {album.tracks.data.length > 0 &&
+            {album.tracks?.data?.length > 0 &&
               album.tracks.data.map((album) => (
                 <TrackList key={album.id} album={album} />
               ))}

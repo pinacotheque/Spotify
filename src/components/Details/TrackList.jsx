@@ -1,5 +1,5 @@
 import { Container, Form, Row, Col, ListGroup } from "react-bootstrap";
-import { Heart, Pause, PlayCircle, ThreeDots } from "../svgs/svgs";
+import { Heart, Pause, PlayCircle, ThreeDots } from "../svgs/Svgs";
 import styles from "./Details.module.css";
 import { useState } from "react";
 
@@ -12,11 +12,11 @@ const TrackList = ({ album }) => {
 
   const playMusic = () => {
     let song = new Audio(album.preview);
-    if (!playing) {
-      song.play();
-    } else {
-      console.log("stop");
+    if (playing) {
       song.pause();
+      console.log("stop");
+    } else {
+      song.play();
     }
     setPlaying(!playing);
   };
