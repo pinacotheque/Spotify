@@ -1,7 +1,7 @@
 import { Container, Form, Row, Col, ListGroup } from "react-bootstrap";
 import TrackList from "./TrackList";
 import styles from "./Details.module.css";
-import { Clock } from "../svgs/Svgs";
+import { Clock } from "../ui/svgs/Svgs";
 const Album = ({ album }) => {
   return (
     <Container className="col-10 offset-2 pb-0 pt-4">

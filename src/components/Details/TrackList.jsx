@@ -1,26 +1,30 @@
 import { useDispatch } from "react-redux";
 import { Container, Form, Row, Col, ListGroup } from "react-bootstrap";
-import { Heart, Pause, PlayCircle, ThreeDots } from "../svgs/Svgs";
+import { Heart, Pause, PlayCircle, ThreeDots } from "../ui/svgs/Svgs";
 import styles from "./Details.module.css";
 import { useState } from "react";
 import { addToLike } from "../../Redux/actions";
+import { connect } from "react-redux";
 
-const TrackList = ({ album }) => {
+const mapStateToProps = (state) => state;
+
+const mapDispatchToProps = (dispatch) => ({
+  addToLikeHandler: (index) => dispatch(addToLike(index)),
+});
+
+const TrackList = ({ album, addToLikeHandler }) => {
   const dispatch = useDispatch();
   const [playing, setPlaying] = useState(false);
   // const togglePlay = () => {
   //   setPlaying(!playing);
   //   playMusic();
   // };
-  const addToLikeHandler = () => {
-    dispatch(
-      addToLike({
-        album,
-      })
-    );
-    console.log("album", album);
-    console.log("liked");
-  };
+
+  // const addToLikeHandler = () => {
+  //   dispatch(addToLike(album));
+  //   console.log("album", album);
+  //   console.log("liked");
+  // };
 
   const playMusic = () => {
     let song = new Audio(album.preview);
@@ -51,7 +55,7 @@ const TrackList = ({ album }) => {
 
         <Col className={styles.threeCol}>
           <Row className={styles.threeIcons}>
-            <div className={styles.Heart} onClick={addToLikeHandler}>
+            <div className={styles.Heart} onClick={addToLikeHandler()}>
               {Heart()}
             </div>
             <div>{(album.duration / 60).toFixed(2)}</div>
@@ -63,4 +67,4 @@ const TrackList = ({ album }) => {
   );
 };
 
-export default TrackList;
+export default connect(mapStateToProps, mapDispatchToProps)(TrackList);
