@@ -2,7 +2,11 @@ import { createStore } from 'redux'
 import mainReducer from '../reducers'
 
 export const initialState = {
-    likedSongs: []
+    likedSongs: [],
+    nowPlaying: {
+        isPlaying: false,
+        playingTitle: {}
+    }
 }
 
 export const store = createStore(

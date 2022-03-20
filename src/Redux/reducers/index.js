@@ -12,6 +12,19 @@ const mainReducer = (state = initialState, action) => {
                 ...state,
                 likedSongs: state.likedSongs.filter((b, i) => i !== action.payload),
             }
+        case 'PLAY_SONG':
+            return {
+                ...state,
+                nowPlaying: {
+                    isPlaying: true,
+                    playingTitle: action.payload
+                }
+            }
+        case 'PAUSE_SONG':
+            return {
+                ...state,
+                likedSongs: state.likedSongs.filter((b, i) => i !== action.payload),
+            }
         default:
             return state
     }

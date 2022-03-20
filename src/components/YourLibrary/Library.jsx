@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import TrackList from "../Details/TrackList";
 
 export default function Library() {
-  const likedSongs = useSelector((state) => state.user.likedSongs);
+  const likedSongs = useSelector((state) => state.likedSongs);
   console.log("likedSongs", likedSongs);
 
   return (

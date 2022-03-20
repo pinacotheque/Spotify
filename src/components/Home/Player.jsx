@@ -8,10 +8,15 @@ import {
   Display,
   VolumeUp,
   Paragraph,
+  Pause,
 } from "../ui/svgs/Svgs";
 import styles from "./Home.module.css";
+import { useSelector } from "react-redux";
 
 const Player = () => {
+  const isPlaying = useSelector((state) => state.nowPlaying.isPlaying);
+  const playingSong = useSelector((state) => state.nowPlaying.playingTitle);
+
   return (
     <footer id={styles.footer}>
       <div className="container-fluid d-flex">
@@ -34,7 +39,7 @@ const Player = () => {
           <div className="row justify-content-center align-items-center">
             <Shuffle />
             <SkipStart />
-            <PlayCircle />
+            {isPlaying ? <Pause /> : <PlayCircle />}
             <SkipEnd />
             <Repeat />
           </div>
