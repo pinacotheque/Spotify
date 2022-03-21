@@ -41,7 +41,7 @@ const Home = () => {
         <div className="pt-5" style={{ zIndex: "1" }}>
           <ul className="nav nav-tabs justify-content-center">
             {topBar.map((link) => (
-              <li className="nav-item pr-1">
+              <li className="nav-item pr-1" key={link}>
                 <a className="nav-link ">
                   <strong>{link}</strong>
                 </a>

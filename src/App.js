@@ -22,7 +22,7 @@ function App() {
 
         <Route exact path='/account' render={(routerProps) => <Account />} />
 
-        <Route exact path={['/', '/album/:id', '/search', '/library']} render={(routerProps) => <Navbar selected={selected} changeSelected={(newCharacter) => setSelected(newCharacter)} />} />
+        <Route exact path={['/', '/album/:id', '/search', '/library']} render={(routerProps) => <Navbar />} />
         <Route exact path={['/', '/album/:id', '/search', '/library']} render={(routerProps) => <Player />} />
 
         <Route exact path='/login' render={(routerProps) => <Login />} />

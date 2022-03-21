@@ -8,20 +8,22 @@ import {
   ThreeDots,
 } from "../ui/svgs/Svgs";
 import styles from "./Details.module.css";
-import { useState } from "react";
-import { addToLike, removeFromLike } from "../../Redux/actions";
+import { useEffect, useState, useRef } from "react";
+import { addToLike, removeFromLike, playSong } from "../../Redux/actions";
 import { useSelector } from "react-redux";
 
 const TrackList = ({ album }) => {
   const likedSongs = useSelector((state) => state.likedSongs);
-  console.log("likedSongs", likedSongs);
+
+  const isPlaying = useSelector((state) => state.nowPlaying.isPlaying);
+  const playingSong = useSelector((state) => state.nowPlaying.playingTitle);
+
+  let song = useRef(new Audio(playingSong.preview));
+  console.log("playing song", playingSong.preview);
 
   const dispatch = useDispatch();
   const [playing, setPlaying] = useState(false);
-  // const togglePlay = () => {
-  //   setPlaying(!playing);
-  //   playMusic();
-  // };
+
   const addToLikeHandler = () => {
     dispatch(addToLike(album));
     console.log("liked");
@@ -29,7 +31,6 @@ const TrackList = ({ album }) => {
 
   const removeLikeHandler = () => {
     dispatch(removeFromLike(album.id));
-    console.log("removed:", album.id);
   };
 
   const likeHandler = () => {
@@ -39,14 +40,18 @@ const TrackList = ({ album }) => {
       addToLikeHandler();
     }
   };
+  const playHandler = () => {
+    dispatch(playSong(album));
+  };
 
-  const playMusic = () => {
-    let song = new Audio(album.preview);
-    if (playing) {
-      song.pause();
+  const PlayMusicHandler = () => {
+    if (playingSong.id === album.id) {
+      song.current.pause();
       console.log("stop");
     } else {
-      song.play();
+      playHandler();
+      song.current.play();
+      console.log("play");
     }
     setPlaying(!playing);
   };
@@ -55,7 +60,7 @@ const TrackList = ({ album }) => {
     <div className={playing ? styles.trackDivChange : styles.trackDiv}>
       <Row className={styles.rowofCols}>
         <Col className="d-flex">
-          <p className={styles.PlayCircle} onClick={playMusic}>
+          <p className={styles.PlayCircle} onClick={PlayMusicHandler}>
             {playing ? Pause() : PlayCircle()}
           </p>
 

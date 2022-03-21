@@ -16,7 +16,7 @@ const mainReducer = (state = initialState, action) => {
             return {
                 ...state,
                 nowPlaying: {
-                    isPlaying: true,
+                    isPlaying: !state.nowPlaying.isPlaying,
                     playingTitle: action.payload
                 }
             }

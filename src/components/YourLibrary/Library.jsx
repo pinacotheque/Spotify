@@ -4,7 +4,6 @@ import TrackList from "../Details/TrackList";
 
 export default function Library() {
   const likedSongs = useSelector((state) => state.likedSongs);
-  console.log("likedSongs", likedSongs);
 
   return (
     <div className="offset-2 pt-5">

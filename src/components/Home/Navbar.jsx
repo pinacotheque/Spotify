@@ -8,26 +8,13 @@ const Navbar = ({ selected, changeSelected }) => {
     <div md={2} className="sidebar" id="sidebar">
       <div className="col side px-3 pb-5" id="side">
         <div>
-          <img className="mb-3" src={image} id="logo" alt="logo" />
-          <a href="/" className={styles.items}>
-            {" "}
-            {House()} Home{" "}
-          </a>
-          <a href="/search" className={styles.items}>
-            {" "}
-            {Search()} Search{" "}
-          </a>
+          <Link to="/">
+            <img className="mb-3" src={image} id="logo" alt="logo" />
+          </Link>
+          <Link to="/">{House()} Home </Link>
+          <Link to="/search">{Search()} Search </Link>
           <Link to="/library">{Collection()} Your Library</Link>
           <a href="/library" className={styles.items}></a>
-        </div>
-        <div>
-          <hr
-            className="my-2"
-            style={{
-              color: "rgb(131, 129, 129)",
-              backgroundColor: "rgb(131, 129, 129)",
-            }}
-          />
         </div>
       </div>
     </div>

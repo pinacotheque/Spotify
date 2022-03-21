@@ -16,26 +16,29 @@ import { useSelector } from "react-redux";
 const Player = () => {
   const isPlaying = useSelector((state) => state.nowPlaying.isPlaying);
   const playingSong = useSelector((state) => state.nowPlaying.playingTitle);
+  console.log("image:", playingSong);
 
   return (
     <footer id={styles.footer}>
       <div className="container-fluid d-flex">
         {/* now playing */}
-        <div className="col-2 align-items-center ">
+        <div className="col-3 align-items-center ">
           <div className="row align-items-center ml-3">
-            <img src="images/radio.png" alt="radio" />
-            <div className="mx-3">
+            <img src={isPlaying ? playingSong.cover_small : ""} alt="radio" />
+            <div className={styles.playingDetail}>
               <p id="nowPlaying " className=" mb-0">
-                {" "}
-                Title{" "}
+                {isPlaying ? playingSong.title : "Title"}
               </p>
-              <a className="nowPlaying">Artist</a>
+              <a className="nowPlaying">
+                {" "}
+                {isPlaying ? playingSong.artist.name : "Artist"}
+              </a>
             </div>
             <Like />
           </div>
         </div>
         {/* song duration */}
-        <div className="col-8 align-items-center">
+        <div className="col-7 align-items-center">
           <div className="row justify-content-center align-items-center">
             <Shuffle />
             <SkipStart />
