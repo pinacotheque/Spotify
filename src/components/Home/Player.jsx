@@ -23,7 +23,7 @@ const Player = () => {
         {/* now playing */}
         <div className="col-2 align-items-center ">
           <div className="row align-items-center ml-3">
-            <img src="images/radio.png" />
+            <img src="images/radio.png" alt="radio" />
             <div className="mx-3">
               <p id="nowPlaying " className=" mb-0">
                 {" "}

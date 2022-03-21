@@ -3,7 +3,7 @@ export const addToLike = (title) => ({
     payload: title,
 })
 
-export const removeFromCartAction = (index) => ({
+export const removeFromLike = (index) => ({
     type: 'REMOVE_FROM_LIKE',
     payload: index,
 })

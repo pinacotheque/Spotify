@@ -7,14 +7,18 @@ const Album = ({ album }) => {
     <Container className="col-10 offset-2 pb-0 pt-4">
       <Row className={styles.albumImageRow}>
         <Col md={3}>
-          <img src={album.cover_medium} />
+          <img src={album.cover_medium} alt="album-cover" />
         </Col>
         <Col md={7} className={styles.albumInfoCol}>
           <h3 className={styles.albumTitle}>{album.title}</h3>
           <h6>
             {album.duration} - {album.release_date}
           </h6>
-          <img src={album.cover_small} className={styles.littleArtistPic} />{" "}
+          <img
+            src={album.cover_small}
+            className={styles.littleArtistPic}
+            alt="artist"
+          />{" "}
           <a href="">{album.artist?.name}</a>
         </Col>
       </Row>

@@ -10,7 +10,7 @@ const mainReducer = (state = initialState, action) => {
         case 'REMOVE_FROM_LIKE':
             return {
                 ...state,
-                likedSongs: state.likedSongs.filter((b, i) => i !== action.payload),
+                likedSongs: state.likedSongs.filter(item => item.id !== action.payload),
             }
         case 'PLAY_SONG':
             return {

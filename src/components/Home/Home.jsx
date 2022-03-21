@@ -16,7 +16,7 @@ const Home = () => {
   useEffect(() => {
     const getMusic = async () => {
       let response = await fetch(
-        "https://striveschool-api.herokuapp.com/api/deezer/search?q=" + "hits",
+        "https://striveschool-api.herokuapp.com/api/deezer/search?q=hits",
         {
           method: "GET",
           headers: {

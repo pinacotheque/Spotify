@@ -5,7 +5,7 @@ const Login = () => {
   return (
     <div id={styles.body}>
       <div className={styles.spotidiv}>
-        <img className={styles.spotify} src={spotify} alt="spotify-image" />
+        <img className={styles.spotify} src={spotify} alt="spotify" />
       </div>
 
       <hr />

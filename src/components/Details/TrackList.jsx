@@ -1,10 +1,15 @@
 import { useDispatch } from "react-redux";
 import { Row, Col } from "react-bootstrap";
-import { Heart, Pause, PlayCircle, ThreeDots } from "../ui/svgs/Svgs";
+import {
+  FilledHeart,
+  Heart,
+  Pause,
+  PlayCircle,
+  ThreeDots,
+} from "../ui/svgs/Svgs";
 import styles from "./Details.module.css";
 import { useState } from "react";
-import { addToLike } from "../../Redux/actions";
-import { connect } from "react-redux";
+import { addToLike, removeFromLike } from "../../Redux/actions";
 import { useSelector } from "react-redux";
 
 const TrackList = ({ album }) => {
@@ -20,6 +25,19 @@ const TrackList = ({ album }) => {
   const addToLikeHandler = () => {
     dispatch(addToLike(album));
     console.log("liked");
+  };
+
+  const removeLikeHandler = () => {
+    dispatch(removeFromLike(album.id));
+    console.log("removed:", album.id);
+  };
+
+  const likeHandler = () => {
+    if (likedSongs.includes(album)) {
+      removeLikeHandler();
+    } else {
+      addToLikeHandler();
+    }
   };
 
   const playMusic = () => {
@@ -51,8 +69,8 @@ const TrackList = ({ album }) => {
 
         <Col className={styles.threeCol}>
           <Row className={styles.threeIcons}>
-            <div className={styles.Heart} onClick={addToLikeHandler}>
-              {Heart()}
+            <div className={styles.Heart} onClick={likeHandler}>
+              {likedSongs.includes(album) ? <FilledHeart /> : <Heart />}
             </div>
             <div>{(album.duration / 60).toFixed(2)}</div>
             <h6 className={styles.ThreeDots}> {ThreeDots()}</h6>

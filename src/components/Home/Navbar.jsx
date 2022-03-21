@@ -8,7 +8,7 @@ const Navbar = ({ selected, changeSelected }) => {
     <div md={2} className="sidebar" id="sidebar">
       <div className="col side px-3 pb-5" id="side">
         <div>
-          <img className="mb-3" src={image} id="logo" alt="spotify-logo" />
+          <img className="mb-3" src={image} id="logo" alt="logo" />
           <a href="/" className={styles.items}>
             {" "}
             {House()} Home{" "}
