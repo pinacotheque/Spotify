@@ -1,4 +1,3 @@
-import { Card, Container, Col, Row } from "react-bootstrap";
 import Cards from "./Cards";
 import { useState, useEffect } from "react";
 import styles from "./Home.module.css";
@@ -17,7 +16,7 @@ const Home = () => {
   useEffect(() => {
     const getMusic = async () => {
       let response = await fetch(
-        "https://striveschool-api.herokuapp.com/api/deezer/search?q=" + "tops",
+        "https://striveschool-api.herokuapp.com/api/deezer/search?q=" + "hits",
         {
           method: "GET",
           headers: {
@@ -28,7 +27,6 @@ const Home = () => {
         }
       );
       let data = await response.json();
-      console.log(data);
       setAlbums(data.data);
     };
     getMusic();

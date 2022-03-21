@@ -1,13 +1,11 @@
-import { Nav, Container, Navbar } from 'react-bootstrap'
-import UpperBar from './Navbar.jsx'
-import styles from './Login.module.css'
+import UpperBar from "./Navbar.jsx";
 
 const Account = () => {
-    return(
-        <>
-        <UpperBar/>
-        </>
-    )
-}
+  return (
+    <>
+      <UpperBar />
+    </>
+  );
+};
 
-export default Account
+export default Account;

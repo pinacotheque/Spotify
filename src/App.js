@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Navbar from './components/Home/Navbar';
 import Player from './components/Home/Player';
 import Home from './components/Home/Home';
-import Album from './components/Details/Album';
 import ShowDetail from './components/Details/ShowDetail';
 import { useState } from 'react'
 import Search from './components/Search/Search';

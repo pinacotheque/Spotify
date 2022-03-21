@@ -1,45 +1,62 @@
-import styles from './Login.module.css'
-import spotify from '../assets/Spotify.png'
+import styles from "./Login.module.css";
+import spotify from "../assets/Spotify.png";
 
 const Login = () => {
-
-    
-    return(
+  return (
     <div id={styles.body}>
-    <div className={styles.spotidiv}>
-    <img className={styles.spotify} src={spotify}/>
-    </div>
+      <div className={styles.spotidiv}>
+        <img className={styles.spotify} src={spotify} alt="spotify-image" />
+      </div>
 
-    <hr/>
-    <div className={styles.outer}>
+      <hr />
+      <div className={styles.outer}>
         <div className={styles.inner}>
-        <form>
+          <form>
             <h3>Log in</h3>
             <div className="form-group">
-                <label class={styles.labels}>Email</label>
-                <input type="email" className="form-control" placeholder="Enter email" />
+              <label class={styles.labels}>Email</label>
+              <input
+                type="email"
+                className="form-control"
+                placeholder="Enter email"
+              />
             </div>
 
             <div className="form-group">
-                <label class={styles.labels}>Password</label>
-                <input type="password" className="form-control" placeholder="Enter password" />
+              <label class={styles.labels}>Password</label>
+              <input
+                type="password"
+                className="form-control"
+                placeholder="Enter password"
+              />
             </div>
 
             <div className="form-group">
-                <div className="custom-control custom-checkbox">
-                    <input type="checkbox" className="custom-control-input" id="customCheck1" />
-                    <label className="custom-control-label text-dark" htmlFor="customCheck1">Remember me</label>
-                </div>
+              <div className="custom-control custom-checkbox">
+                <input
+                  type="checkbox"
+                  className="custom-control-input"
+                  id="customCheck1"
+                />
+                <label
+                  className="custom-control-label text-dark"
+                  htmlFor="customCheck1"
+                >
+                  Remember me
+                </label>
+              </div>
             </div>
 
-            <button type="submit" className="btn btn-dark btn-lg btn-block">Sign in</button>
+            <button type="submit" className="btn btn-dark btn-lg btn-block">
+              Sign in
+            </button>
             <p className={styles.forgot_password}>
-                Forgot <a href="#">password?</a>
+              Forgot <a href="#">password?</a>
             </p>
-        </form>
+          </form>
         </div>
+      </div>
     </div>
-    </div>
-    )
-}
-export default Login
+  );
+};
+export default Login;

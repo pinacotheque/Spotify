@@ -1,14 +1,14 @@
 import image from "../assets/logo.png";
-import { Container, Form, FormControl } from "react-bootstrap";
-import { Collection, House, Install, Search } from "../ui/svgs/Svgs";
+import { Collection, House, Search } from "../ui/svgs/Svgs";
 import styles from "./Home.module.css";
+import { Link } from "react-router-dom";
 
 const Navbar = ({ selected, changeSelected }) => {
   return (
     <div md={2} className="sidebar" id="sidebar">
       <div className="col side px-3 pb-5" id="side">
         <div>
-          <img className="mb-3" src={image} id="logo" />
+          <img className="mb-3" src={image} id="logo" alt="spotify-logo" />
           <a href="/" className={styles.items}>
             {" "}
             {House()} Home{" "}
@@ -17,9 +17,8 @@ const Navbar = ({ selected, changeSelected }) => {
             {" "}
             {Search()} Search{" "}
           </a>
-          <a href="/library" className={styles.items}>
-            {Collection()} Your Library
-          </a>
+          <Link to="/library">{Collection()} Your Library</Link>
+          <a href="/library" className={styles.items}></a>
         </div>
         <div>
           <hr
@@ -29,9 +28,6 @@ const Navbar = ({ selected, changeSelected }) => {
               backgroundColor: "rgb(131, 129, 129)",
             }}
           />
-          <div className={"row align-items-center pb-4"}>
-            <img src="" />
-          </div>
         </div>
       </div>
     </div>

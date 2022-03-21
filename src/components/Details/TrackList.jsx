@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { Container, Form, Row, Col, ListGroup } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 import { Heart, Pause, PlayCircle, ThreeDots } from "../ui/svgs/Svgs";
 import styles from "./Details.module.css";
 import { useState } from "react";
@@ -19,7 +19,6 @@ const TrackList = ({ album }) => {
   // };
   const addToLikeHandler = () => {
     dispatch(addToLike(album));
-    console.log("album", album);
     console.log("liked");
   };
 

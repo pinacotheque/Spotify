@@ -1,4 +1,4 @@
-import { Container, Form, FormControl } from "react-bootstrap";
+import { Form, FormControl } from "react-bootstrap";
 import { useState, useEffect } from "react";
 import Cards from "../Home/Cards";
 import styles from "./Search.module.css";
@@ -20,7 +20,6 @@ const Search = ({ selected, changeSelected }) => {
         }
       );
       let data = await response.json();
-      console.log(data);
       setAlbums(data.data);
     };
     getMusic();

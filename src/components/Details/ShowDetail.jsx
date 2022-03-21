@@ -6,7 +6,6 @@ const ShowDetail = ({ match, history }) => {
 
   useEffect(() => {
     const getAlbumData = async () => {
-      let id = match.id;
       if (match.isExact) {
         let response = await fetch(
           "https://deezerdevs-deezer.p.rapidapi.com/album/" + match.params.id,

@@ -1,4 +1,4 @@
-import { Container, Form, Row, Col, ListGroup } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import TrackList from "./TrackList";
 import styles from "./Details.module.css";
 import { Clock } from "../ui/svgs/Svgs";
