@@ -13,15 +13,24 @@ const Album = ({ album }) => {
             </Col>
             <Col md={7} className={styles.albumInfoCol}>
               <h3 className={styles.albumTitle}>{album.title}</h3>
-              <h6>
-                {album.duration} - {album.release_date}
-              </h6>
-              <img
-                src={album.cover_small}
-                className={styles.littleArtistPic}
-                alt="artist"
-              />{" "}
-              <a href="">{album.artist?.name}</a>
+
+              <div className="d-flex align-items-center">
+                <div className="d-flex align-items-center">
+                  <img
+                    src={album.cover_small}
+                    className={styles.littleArtistPic}
+                    alt="artist"
+                  />{" "}
+                  <a href="" className="px-2">
+                    {album.artist?.name}
+                  </a>
+                  &#8226; {"   "}
+                </div>
+                <h6 className="pl-2 m-0">
+                  {album.nb_tracks} {album.nb_tracks > 1 ? "songs" : "song"}{" "}
+                  &#8226; {album.release_date}
+                </h6>
+              </div>
             </Col>
           </Row>
 

@@ -16,7 +16,7 @@ import { useSelector } from "react-redux";
 const Player = () => {
   const isPlaying = useSelector((state) => state.nowPlaying.isPlaying);
   const playingSong = useSelector((state) => state.nowPlaying.playingTitle);
-  console.log("image:", playingSong);
+  console.log("image:", playingSong.cover_small);
 
   return (
     <footer id={styles.footer}>

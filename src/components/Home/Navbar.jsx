@@ -13,7 +13,7 @@ const Navbar = ({ selected, changeSelected }) => {
           </Link>
           <Link to="/">{House()} Home </Link>
           <Link to="/search">{Search()} Search </Link>
-          <Link to="/library">{Collection()} Your Library</Link>
+          <Link to="/library">{Collection()} Liked Songs</Link>
           <a href="/library" className={styles.items}></a>
         </div>
       </div>

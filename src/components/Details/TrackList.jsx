@@ -42,16 +42,15 @@ const TrackList = ({ album }) => {
   };
   const playHandler = () => {
     dispatch(playSong(album));
+    song.current.play();
   };
 
   const PlayMusicHandler = () => {
     if (playingSong.id === album.id) {
       song.current.pause();
-      console.log("stop");
     } else {
       playHandler();
-      song.current.play();
-      console.log("play");
+      console.log("play this:", album.title);
     }
     setPlaying(!playing);
   };
@@ -60,6 +59,7 @@ const TrackList = ({ album }) => {
     <div className={playing ? styles.trackDivChange : styles.trackDiv}>
       <Row className={styles.rowofCols}>
         <Col className="d-flex">
+          {/* <audio src={playingSong.preview}></audio> */}
           <p className={styles.PlayCircle} onClick={PlayMusicHandler}>
             {playing ? Pause() : PlayCircle()}
           </p>
