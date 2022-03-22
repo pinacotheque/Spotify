@@ -30,17 +30,9 @@ function App() {
 
         <Route exact path='/register' render={(routerProps) => <Register />} />
 
-        <Switch>
-
-          <Route exact path='/'>
-            <Home selected={selected} />
-          </Route>
-
-          <Route exact path='/artist'>
-            {/* <Artist/> */}
-          </Route>
-
-        </Switch>
+        <Route exact path='/'>
+          <Home selected={selected} />
+        </Route>
 
         <Route path='/album/:id' render={(routerProps) => <ShowDetail {...routerProps} selected={selected} />} />
         <Route exact path='/search' render={(routerProps) => <Search {...routerProps} selected={selected} changeSelected={(newCharacter) => setSelected(newCharacter)} />} />

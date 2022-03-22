@@ -35,9 +35,6 @@ const Home = () => {
   return (
     <div className={styles.containerHome} class="offset-2">
       <div id={styles.contentHome}>
-        <div className={styles.profile}>
-          <h6>Profile</h6>
-        </div>
         <div className="pt-5" style={{ zIndex: "1" }}>
           <ul className="nav nav-tabs justify-content-center">
             {topBar.map((link) => (

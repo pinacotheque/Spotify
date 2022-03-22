@@ -8,36 +8,25 @@ import {
   ThreeDots,
 } from "../ui/svgs/Svgs";
 import styles from "./Details.module.css";
-import { useEffect, useState, useRef } from "react";
+import { useState, useRef } from "react";
 import { addToLike, removeFromLike, playSong } from "../../Redux/actions";
 import { useSelector } from "react-redux";
 
 const TrackList = ({ album }) => {
   const likedSongs = useSelector((state) => state.likedSongs);
 
-  const isPlaying = useSelector((state) => state.nowPlaying.isPlaying);
   const playingSong = useSelector((state) => state.nowPlaying.playingTitle);
 
   let song = useRef(new Audio(playingSong.preview));
-  console.log("playing song", playingSong.preview);
 
   const dispatch = useDispatch();
   const [playing, setPlaying] = useState(false);
 
-  const addToLikeHandler = () => {
-    dispatch(addToLike(album));
-    console.log("liked");
-  };
-
-  const removeLikeHandler = () => {
-    dispatch(removeFromLike(album.id));
-  };
-
   const likeHandler = () => {
     if (likedSongs.includes(album)) {
-      removeLikeHandler();
+      dispatch(removeFromLike(album.id));
     } else {
-      addToLikeHandler();
+      dispatch(addToLike(album));
     }
   };
   const playHandler = () => {
@@ -50,7 +39,6 @@ const TrackList = ({ album }) => {
       song.current.pause();
     } else {
       playHandler();
-      console.log("play this:", album.title);
     }
     setPlaying(!playing);
   };

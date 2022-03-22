@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Album from "./Album";
 
-const ShowDetail = ({ match, history }) => {
+const ShowDetail = ({ match }) => {
   const [info, setInfo] = useState(undefined);
 
   useEffect(() => {

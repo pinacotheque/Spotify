@@ -211,3 +211,6 @@ input {
 .inputbar {
   border-radius: 50px !important;
 }
+.nav-tabs {
+  width: 95%;
+}
